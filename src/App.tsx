@@ -4,13 +4,15 @@ import Users from './pages/Users';
 import Login from './pages/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Register from './pages/Register';
+import RedirectToUsers from './components/RedirectToUsers';
 
 function App() {
   return (
     <Router>
     <div className="App">
         <Routes>
-          <Route path={'/'} Component={Users}/>
+          <Route path={'/'} Component={RedirectToUsers}/>
+          <Route path={'/users'} Component={Users}/>
           <Route path={'/login'} Component={Login}/>
           <Route path={'/register'} Component={Register}/>
         </Routes>
